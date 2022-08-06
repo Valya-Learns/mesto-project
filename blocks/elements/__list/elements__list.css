@@ -5,7 +5,6 @@
     grid-template-columns: repeat(auto-fit, 282px);
     width: 100%;
     justify-content: space-between;
-    border: solid yellow;
     box-sizing: border-box;
     gap: 14px;
     padding: 0;

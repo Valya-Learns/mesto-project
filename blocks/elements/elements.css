@@ -1,6 +1,5 @@
 .elements{
-    max-width: 880px;
     margin: 0 auto;
-    border: solid rebeccapurple;
     width: 100%;
+    padding-bottom: 66px;
 }
