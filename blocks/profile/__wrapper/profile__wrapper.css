@@ -1,7 +1,8 @@
 .profile__wrapper{
     display: flex;
-    min-width: 360px;
-    gap: 12px;
+    max-width: 366px;
+    width: 100%;
+    gap: 8px;
     padding-top: 22px;
 }
 

@@ -1,14 +1,14 @@
 .profile__edit-button{
     border: 1px solid white;
+    margin-left: auto;
     width: 24px;
     height: 24px;
     background-color: black;
-    align-self: center;
     background-image: url(../../../images/Edit-Button.png);
     background-repeat: no-repeat;
-    width: 100%;
     outline: none;
-    background-size: cover;
+    background-size:cover;
+    margin-top: 16px;
 }
 
 .profile__edit-button:hover{
