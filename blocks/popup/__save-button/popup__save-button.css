@@ -11,3 +11,7 @@
     height: 50px;
     display: block;
 }
+
+.popup__save-button:hover{
+    opacity: .8;
+}

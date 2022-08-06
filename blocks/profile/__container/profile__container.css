@@ -2,3 +2,10 @@
     max-width: 504.75px;
     display: flex;
 }
+
+@media screen  and (max-width: 1023px) {
+    .profile__container{
+      flex-direction: column;
+      margin: 0 auto;
+ }
+ }

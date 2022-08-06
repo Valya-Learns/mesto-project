@@ -3,3 +3,9 @@
     object-fit: contain;
     padding-bottom: 45px;
 }
+
+@media screen  and (max-width: 1023px) {
+    .logo_place_header{
+      padding-left: 27px;
+ }
+ }

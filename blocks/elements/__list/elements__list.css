@@ -8,4 +8,5 @@
     box-sizing: border-box;
     gap: 17px;
     padding: 0;
+    border: solid red;
 }
