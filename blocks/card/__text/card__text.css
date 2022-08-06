@@ -1,0 +1,8 @@
+.card__text{
+    margin: 0 auto;
+    max-width: 246px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 26px;
+    padding-bottom: 31px;
+}

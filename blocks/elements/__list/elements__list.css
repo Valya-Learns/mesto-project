@@ -1,0 +1,12 @@
+.elements__list{
+    margin: 0 auto;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 282px);
+    width: 100%;
+    justify-content: space-between;
+    border: solid yellow;
+    box-sizing: border-box;
+    gap: 14px;
+    padding: 0;
+}
