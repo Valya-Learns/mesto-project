@@ -8,5 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid red;
+    left: 0;
+    top: 0;
 }
