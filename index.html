@@ -1,119 +1,131 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mesto</title>
+  <title>Место</title>
   <link rel="stylesheet" href="./pages/index.css">
 </head>
+
 <body class="body">
-    <div class="page">
-      <div class="popup">
-        <div class="popup__container">
-          <img src="./images/Close-Icon.png" class="popup__close-button" alt="Закрыть">
-            <h2 class="popup__title">
-              Редактировать профиль
-            </h2>
-            <div class="popup__form">
-              <input type="text" name="name" placeholder="Жак-Ив Кусто" class="popup__input">
-              <input type="text" name="description" placeholder="Исследователь океана" class="popup__input">
-              <button type="submit" class="popup__save-button">
-                Сохранить
-              </button>
-            </div>
+  <div class="page">
+    <div class="popup">
+      <div class="popup__container">
+        <img src="./images/Close-Icon.png" class="popup__close-button" alt="Закрыть">
+        <h2 class="popup__title">
+          Редактировать профиль
+        </h2>
+        <div class="popup__form">
+          <input type="text" name="name" placeholder="Жак-Ив Кусто" class="popup__input">
+          <input type="text" name="description" placeholder="Исследователь океана" class="popup__input">
+          <button type="submit" class="popup__save-button">
+            Сохранить
+          </button>
         </div>
       </div>
-        <header class="header">
-            <img class="logo logo_place_header" src="./images/mesto__logo.svg" alt="Лого Mesto">
-        </header>
-        <main class="content">
-            <section class="profile">
-                <div class="profile__container">
-                  <img src="./images/Profile-picture.jpg" class="profile__avatar" alt="Аватар профиля">
-                  
-                  <div class="profile__info">
-                    <div class="profile__wrapper">
-                        <h1 class="profile__name">
-                           Жак-Ив&nbsp;Кусто
-                        </h1>
-                        <button class="profile__edit-button">
-                        </button>
-                      </div>
-                      <p class="profile__description">
-                          Исследователь океана
-                      </p>
-                    
-                   </div>
-                   
-                </div>
-                <button class="profile__add-button">
-                </button>
-                
-             </section> 
-             <section class="elements">
-               <ul class="elements__list">
-                 <li class="card">
-                   <img src="./images/Image-Karachaevo-Cherkessk.jpg" alt="Карачаевск" class="card__image">
-                   <div class="card__text">
-                        <h2 class="card__title">
-                          Карачаево-Черкесск
-                        </h2>
-                        <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
-                    </div>
-                 </li>
-                 <li class="card">
-                    <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Карачаевск" class="card__image">
-                    <div class="card__text">
-                      <h2 class="card__title">
-                        Гора Эльбрус 
-                      </h2>
-                      <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
-                    </div>
-                 </li>
-                <li class="card">
-                  <img src="./images/Image-Dombai.jpg" alt="Карачаевск" class="card__image">
-                  <div class="card__text">
-                    <h2 class="card__title">
-                      Домбай
-                    </h2>
-                    <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
-                  </div>
-                </li>
-                <li class="card">
-                  <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Карачаевск" class="card__image">
-                  <div class="card__text">
-                    <h2 class="card__title">
-                      Гора Эльбрус
-                    </h2>
-                    <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
-                  </div>
-                </li>
-                <li class="card">
-                  <img src="./images/Image-Dombai.jpg" alt="Карачаевск" class="card__image">
-                  <div class="card__text">
-                    <h2 class="card__title">
-                      Домбай
-                    </h2>
-                    <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
-                  </div>
-                </li>
-                <li class="card">
-                   <img src="./images/Image-Karachaevo-Cherkessk.jpg" alt="Карачаевск" class="card__image">
-                   <div class="card__text">
-                    <h2 class="card__title">
-                      Карачаево-Черкесск
-                    </h2>
-                    <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
-                   </div>
-                </li>
-              </ul>
-             </section>
-        </main>
-        <footer class="footer">
-          <p class="footer__copyright">
-            &copy; 2022 Mesto Russia
-          </p>
-        </footer> 
-       
     </div>
+    <header class="header">
+      <img class="logo logo_place_header" src="./images/mesto__logo.svg" alt="Лого Mesto">
+    </header>
+    <main class="content">
+      <section class="profile">
+          <img src="./images/Profile-picture.jpg" class="profile__avatar" alt="Аватар профиля">
+
+          <div class="profile__info">
+            <!-- <div class="profile__wrapper"> -->
+              <h1 class="profile__name">
+                Жак-Ив&nbsp;Кусто
+              </h1>
+            
+              <button type="button" class="profile__edit-button">
+              </button>
+            <!-- </div> -->
+            <p class="profile__description">
+              Исследователь океана
+            </p>
+              
+          </div>
+        <button type="button" class="profile__add-button">
+        </button>
+
+      </section>
+      <section class="elements">
+        <ul class="elements__list">
+          <li class="card">
+            <img src="./images/Image-Karachaevo-Cherkessk.jpg" alt="Карачаевск" class="card__image">
+            <div class="card__text">
+              <h2 class="card__title">
+                Карачаево-Черкесск
+              </h2>
+              <button type="button" class="button">
+                <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Карачаевск" class="card__image">
+            <div class="card__text">
+              <h2 class="card__title">
+                Гора Эльбрус
+              </h2>
+              <button type="button" class="button">
+                <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/Image-Dombai.jpg" alt="Карачаевск" class="card__image">
+            <div class="card__text">
+              <h2 class="card__title">
+                Домбай
+              </h2>
+              <button type="button" class="button">
+                <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Карачаевск" class="card__image">
+            <div class="card__text">
+              <h2 class="card__title">
+                Гора Эльбрус
+              </h2>
+              <button type="button" class="button">
+                <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/Image-Dombai.jpg" alt="Карачаевск" class="card__image">
+            <div class="card__text">
+              <h2 class="card__title">
+                Домбай
+              </h2>
+              <button type="button" class="button">
+                <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
+              </button>
+            </div>
+          </li>
+          <li class="card">
+            <img src="./images/Image-Karachaevo-Cherkessk.jpg" alt="Карачаевск" class="card__image">
+            <div class="card__text">
+              <h2 class="card__title">
+                Карачаево-Черкесск
+              </h2>
+              <button type="button" class="button">
+                <img class="card__like-button" src="./images/Like-button.svg" alt="Кнопка Нравится">
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">
+        &copy; 2022 Mesto Russia
+      </p>
+    </footer>
+
+  </div>
 </body>

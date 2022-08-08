@@ -1,10 +1,13 @@
 .profile__description{
-    color: white;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    margin: 0;
-    max-width: 336px;
+  max-width: 336px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  white-space: nowrap;
+  margin: 0;
+  border: solid red;
 }
 
 @media screen  and (max-width: 1023px) {
