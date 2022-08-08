@@ -4,9 +4,9 @@
     display: grid;
     grid-template-columns: 1fr min-content;
     align-items: baseline;
-    max-height: 73px;
+    /* max-height: 73px; */
     column-gap: 18px;
-    margin-right: 244px;
+    margin-right: auto;
     row-gap: 6px;
 }
 

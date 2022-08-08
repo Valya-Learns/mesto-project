@@ -19,6 +19,7 @@
   .profile__edit-button{
     width: 18px;
     height: 18px;
-    align-self: flex-end;
+    background-size: 7.5px 7.5px;
+    align-self: center;
   }
 }
