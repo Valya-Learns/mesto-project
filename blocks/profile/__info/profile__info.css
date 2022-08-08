@@ -8,14 +8,15 @@
     column-gap: 18px;
     margin-right: 244px;
     row-gap: 6px;
-    border: solid green;
 }
 
 @media screen  and (max-width: 1023px) {
     .profile__info{
       margin: 0 auto;
-      max-width: 282px;
+      max-width: 230px;
       column-gap: 0;
-      padding: 0;
+      padding-bottom: 42px;
+      justify-content: flex-end;
+      padding-left: 8px;
  }
  }
