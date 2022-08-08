@@ -3,6 +3,8 @@
   display: flex;
   justify-content: flex-start;
   margin: 0;
+  align-items: center;
+  border: solid red;
 }
 
 @media screen  and (max-width: 1023px) {
@@ -10,5 +12,6 @@
       flex-direction: column;
       max-width: 282px;
       justify-content: center;
+      margin: 0 auto;
  }
  }
