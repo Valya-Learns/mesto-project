@@ -25,5 +25,7 @@
         line-height: 17px;
         margin-bottom: 25px;
         margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
