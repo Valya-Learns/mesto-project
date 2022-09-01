@@ -1,0 +1,17 @@
+.card__trash-icon{
+    margin: 0;
+    padding: 0;
+    align-self: flex-end;
+    width: 18px;
+    height: 19px;
+    background: url(../../../images/Trash.svg) center no-repeat;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    top: 20px;
+    right: 20px
+}
+
+.card__trash-icon:hover{
+    opacity: .6;
+}

@@ -10,17 +10,35 @@
 
 <body class="body">
   <div class="page">
-    <div class="popup">
+    <div class="popup popup-edit" id="popup-edit">
       <div class="popup__container">
-        <button type="button" class="button popup__close-button"></button>
+        <button type="button" class="button popup__close-button close-edit"></button>
         <h2 class="popup__title">
           Редактировать профиль
         </h2>
-        <form class="form" name="profile-edit-form">
-          <input type="text" name="name" placeholder="Жак-Ив Кусто" class="form__text-input">
-          <input type="text" name="description" placeholder="Исследователь океана" class="form__text-input">
-          <button type="submit" class="button form__save-button">
+        <form class="form form-edit" name="profile-edit-form">
+          <input type="text" name="name" placeholder="Жак-Ив Кусто"
+            class="form__text-input form__text-input__type_name">
+          <input type="text" name="description" placeholder="Исследователь океана"
+            class="form__text-input form__text-input_type_job">
+          <button type="submit" class="button form__save-button edit-form_save-button">
             Сохранить
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup-add" id="popup-add">
+      <div class="popup__container">
+        <button type="button" class="button popup__close-button сlose-add"></button>
+        <h2 class="popup__title">
+          Новое место
+        </h2>
+        <form class="form form-add" name="profile-edit-form">
+          <input type="text" name="name" placeholder="Название" class="form__text-input form__text-input__type_place-name">
+          <input type="text" name="description" placeholder="Ссылка на картинку"
+            class="form__text-input form__text-input_type_image-link">
+          <button type="submit" class="button form__save-button add-card">
+            Создать
           </button>
         </form>
       </div>
@@ -35,18 +53,21 @@
           <h1 class="profile__name">
             Жак-Ив&nbsp;Кусто
           </h1>
-          <button type="button" class="button profile__edit-button">
+          <button type="button" class="button profile__edit-button" data-target="popup-edit">
           </button>
           <p class="profile__description">
             Исследователь океана
           </p>
         </div>
-        <button type="button" class="button profile__add-button">
+        <button type="button" class="button profile__add-button" data-target="popup-add">
         </button>
       </section>
       <section class="elements">
         <ul class="elements__list">
-          <li class="card">
+          <!-- <li class="card">
+            <button class="button card__trash-icon">
+
+            </button>
             <img src="./images/Image-Karachaevo-Cherkessk.jpg" alt="Карачаевск" class="card__image">
             <div class="card__text">
               <h2 class="card__title">
@@ -57,6 +78,9 @@
             </div>
           </li>
           <li class="card">
+            <button class="button card__trash-icon">
+
+            </button>
             <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Карачаевск" class="card__image">
             <div class="card__text">
               <h2 class="card__title">
@@ -67,6 +91,9 @@
             </div>
           </li>
           <li class="card">
+            <button class="button card__trash-icon">
+
+            </button>
             <img src="./images/Image-Dombai.jpg" alt="Карачаевск" class="card__image">
             <div class="card__text">
               <h2 class="card__title">
@@ -77,6 +104,9 @@
             </div>
           </li>
           <li class="card">
+            <button class="button card__trash-icon">
+
+            </button>
             <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Карачаевск" class="card__image">
             <div class="card__text">
               <h2 class="card__title">
@@ -87,6 +117,9 @@
             </div>
           </li>
           <li class="card">
+            <button class="button card__trash-icon">
+
+            </button>
             <img src="./images/Image-Dombai.jpg" alt="Карачаевск" class="card__image">
             <div class="card__text">
               <h2 class="card__title">
@@ -97,6 +130,9 @@
             </div>
           </li>
           <li class="card">
+            <button class="button card__trash-icon">
+
+            </button>
             <img src="./images/Image-Karachaevo-Cherkessk.jpg" alt="Карачаевск" class="card__image">
             <div class="card__text">
               <h2 class="card__title">
@@ -105,7 +141,7 @@
               <button type="button" class="button card__like-button">
               </button>
             </div>
-          </li>
+          </li> -->
         </ul>
       </section>
     </main>
@@ -115,4 +151,17 @@
       </p>
     </footer>
   </div>
+  <template class="template" >
+    <li class="card">
+      <button class="button card__trash-icon"></button>
+      <img src="" class="card__image">
+      <div class="card__text">
+        <h2 class="card__title">
+          
+        </h2>
+        <button type="button" class="button card__like-button"></button>
+      </div>
+    </li>
+  </template>
+  <script src="./script.js"></script>
 </body>
