@@ -14,6 +14,7 @@ const closeAdd = popupAdd.querySelector('.сlose-add')
 const closeEdit = popupEdit.querySelector('.close-edit')
 const elementsList = page.querySelector('.elements__list');
 const addCardButton = page.querySelector('.add-card')
+const cardTemplate = page.querySelector('.template').content;
 const initialCards = [
     {
         name: 'Архыз',
@@ -83,16 +84,16 @@ trash.addEventListener('click', function () {
 }); 
 
 function addCard(placeName, imageLink){
-    const cardTemplate = page.querySelector('.template').content;
+
     const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
     cardElement.querySelector('.card__title').textContent = placeName;
-    cardElement.querySelector('.card__image').textContent = imageLink;
+    cardImage.querySelector('.card__image').src = imageLink;
    
-    elementsList.append(cardElement)
-    
+    elementsList.prepend(cardElement)
+    return cardElement
 }
 
-addCardButton.addEventListener('submit', ()=>{
+addCardButton.addEventListener('click', ()=>{
     const image = page.querySelector('.form__text-input_type_image-link');
     const cardName = page.querySelector('.form__text-input__type_place-name');
     addCard(cardName.value, image.value);
