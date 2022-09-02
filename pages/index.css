@@ -34,3 +34,7 @@
 @import url(../blocks/form/__save-button/form__save-button.css);
 @import url(../blocks/form/__text-input/form__text-input.css);
 @import url(../blocks/card/__trash-icon/card__trash-icon.css);
+@import url(../blocks/popup-image/__image/popup-image__image.css);
+@import url(../blocks/popup-image/__text/popup-image__text.css);
+@import url(../blocks/popup-image/popup-image.css);
+@import url(../blocks/popup-image/__wrapper/popup-image__wrapper.css);

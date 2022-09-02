@@ -43,6 +43,16 @@
         </form>
       </div>
     </div>
+    <div class="popup popup-image">
+      <div class="popup-image__wrapper">
+        <button type="button" class="button popup__close-button close-image"></button>
+        <img class="popup-image__image">
+      <p class="popup-image__text">
+       
+      </p>
+    
+      </div>
+    </div>
     <header class="header">
       <img class="logo logo_place_header" src="./images/mesto__logo.svg" alt="Лого Mesto">
     </header>
@@ -64,84 +74,19 @@
       </section>
       <section class="elements">
         <ul class="elements__list">
-          <!-- <li class="card">
-            <button class="button card__trash-icon">
-
-            </button>
-            <img src="./images/Image-Karachaevo-Cherkessk.jpg" alt="Карачаевск" class="card__image">
-            <div class="card__text">
-              <h2 class="card__title">
-                Карачаево-Черкесск
-              </h2>
-              <button type="button" class="button card__like-button">
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <button class="button card__trash-icon">
-
-            </button>
-            <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Карачаевск" class="card__image">
-            <div class="card__text">
-              <h2 class="card__title">
-                Гора Эльбрус
-              </h2>
-              <button type="button" class="button card__like-button">
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <button class="button card__trash-icon">
-
-            </button>
-            <img src="./images/Image-Dombai.jpg" alt="Карачаевск" class="card__image">
-            <div class="card__text">
-              <h2 class="card__title">
-                Домбай
-              </h2>
-              <button type="button" class="button card__like-button">
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <button class="button card__trash-icon">
-
-            </button>
-            <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Карачаевск" class="card__image">
-            <div class="card__text">
-              <h2 class="card__title">
-                Гора Эльбрус
-              </h2>
-              <button type="button" class="button card__like-button">
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <button class="button card__trash-icon">
-
-            </button>
-            <img src="./images/Image-Dombai.jpg" alt="Карачаевск" class="card__image">
-            <div class="card__text">
-              <h2 class="card__title">
-                Домбай
-              </h2>
-              <button type="button" class="button card__like-button">
-              </button>
-            </div>
-          </li>
-          <li class="card">
-            <button class="button card__trash-icon">
-
-            </button>
-            <img src="./images/Image-Karachaevo-Cherkessk.jpg" alt="Карачаевск" class="card__image">
-            <div class="card__text">
-              <h2 class="card__title">
-                Карачаево-Черкесск
-              </h2>
-              <button type="button" class="button card__like-button">
-              </button>
-            </div>
-          </li> -->
+          
+          <template class="template" >
+            <li class="card">
+              <button class="button card__trash-icon"></button>
+              <img class="card__image">
+              <div class="card__text">
+                <h2 class="card__title">
+                  
+                </h2>
+                <button type="button" class="button card__like-button"></button>
+              </div>
+            </li>
+          </template>
         </ul>
       </section>
     </main>
@@ -151,17 +96,6 @@
       </p>
     </footer>
   </div>
-  <template class="template" >
-    <li class="card">
-      <button class="button card__trash-icon"></button>
-      <img class="card__image">
-      <div class="card__text">
-        <h2 class="card__title">
-          
-        </h2>
-        <button type="button" class="button card__like-button"></button>
-      </div>
-    </li>
-  </template>
+
   <script src="./script.js"></script>
 </body>
