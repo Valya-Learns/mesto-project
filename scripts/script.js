@@ -19,9 +19,7 @@ const nameInput = page.querySelector('.form__text-input__type_name');
 const jobInput = page.querySelector('.form__text-input_type_job');
 const image = page.querySelector('.form__text-input_type_image-link');
 const cardName = page.querySelector('.form__text-input__type_place-name');
-const cardElement = page.querySelector('.template').content.querySelector('.card').cloneNode(true);
-const cardTemplate = document.querySelector('.template').content;
-const initialCardElement = cardTemplate.querySelector('.card').cloneNode(true);
+const cardElement = page.querySelector('.template').content.querySelector('.card');
 const likeButton = cardElement.querySelector('.card__like-button')
 const trash = cardElement.querySelector('.card__trash-icon')
 const cardImage = cardElement.querySelector('.card__image');
@@ -87,8 +85,11 @@ function handleProfileFormSubmit(evt) {
 
 formEdit.addEventListener('submit', handleProfileFormSubmit);
 
-function createCard(cardElement) {
+function createCard(placeName, imageLink) {
     
+    const card = cardElement.cloneNode(true);
+    card.querySelector('.card__title').textContent = placeName;
+    сard.querySelector('.card__image').src = imageLink;
 
     likeButton.addEventListener('click', function (evt) {
         evt.target.classList.toggle('card__like-button_active');
@@ -109,15 +110,11 @@ function createCard(cardElement) {
         })
     })
 
-    
-
     return cardElement
 }
 
 function addCard(placeName, imageLink) {
     const cardElement = createCard(placeName, imageLink)
-    // cardElement.querySelector('.card__title').textContent = placeName;
-    // cardElement.querySelector('.card__image').src = imageLink;
     elementsList.prepend(cardElement);
 }
 
@@ -132,35 +129,33 @@ function submitCard(evt) {
 
 formAdd.addEventListener('submit', submitCard)
 
-initialCards.forEach(function (element) {
+// initialCards.forEach(function (element) {
     
-    const initialCardElement = cardTemplate.querySelector('.card').cloneNode(true);
+//     initialCardElement.querySelector('.card__title').textContent = element.name;
+//     initialCardElement.querySelector('.card__image').src = element.link;
+//     elementsList.append(initialCardElement);
 
-    initialCardElement.querySelector('.card__title').textContent = element.name;
-    initialCardElement.querySelector('.card__image').src = element.link;
-    elementsList.append(initialCardElement);
+//     const likeButton = initialCardElement.querySelector('.card__like-button')
+//     likeButton.addEventListener('click', function (evt) {
+//         evt.target.classList.toggle('card__like-button_active');
+//     }
+//     )
 
-    const likeButton = initialCardElement.querySelector('.card__like-button')
-    likeButton.addEventListener('click', function (evt) {
-        evt.target.classList.toggle('card__like-button_active');
-    }
-    )
+//     const trash = initialCardElement.querySelector('.card__trash-icon')
+//     trash.addEventListener('click', function () {
+//         trash.closest('.card').remove();
+//     });
 
-    const trash = initialCardElement.querySelector('.card__trash-icon')
-    trash.addEventListener('click', function () {
-        trash.closest('.card').remove();
-    });
+//     const initialCardImage = initialCardElement.querySelector('.card__image');
+//     initialCardImage.addEventListener('click', () => {
+//         openPopup(popupCard);
+//         popupCardImage.src = element.link;
+//         popupCardText.textContent = element.name;
 
-    const initialCardImage = initialCardElement.querySelector('.card__image');
-    initialCardImage.addEventListener('click', () => {
-        openPopup(popupCard);
-        popupCardImage.src = element.link;
-        popupCardText.textContent = element.name;
+//         closeImage.addEventListener('click', () => {
+//             closePopup(popupCard);
+//         })
+//     })
 
-        closeImage.addEventListener('click', () => {
-            closePopup(popupCard);
-        })
-    })
-
-    return initialCardElement;
-})
+//     return initialCardElement;
+// })
