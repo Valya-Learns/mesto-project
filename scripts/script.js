@@ -18,7 +18,10 @@ const closeImage = page.querySelector('.close-image')
 const nameInput = page.querySelector('.form__text-input__type_name');
 const jobInput = page.querySelector('.form__text-input_type_job');
 const image = page.querySelector('.form__text-input_type_image-link');
+const cardElement = document.querySelector('.template').content;
 const cardName = page.querySelector('.form__text-input__type_place-name');
+
+
 
 const initialCards = [
     {
@@ -82,77 +85,53 @@ function handleProfileFormSubmit(evt) {
 
 formEdit.addEventListener('submit', handleProfileFormSubmit);
 
-function addCard(placeName, imageLink) {
-    const cardTemplate = document.querySelector('.template').content;
-    const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
 
-    cardElement.querySelector('.card__title').textContent = placeName;
-    cardElement.querySelector('.card__image').src = imageLink;
-    elementsList.prepend(cardElement);
 
-    const likeButton = cardElement.querySelector('.card__like-button')
+function createCard(placeName, imageLink) {
+    const card = cardElement.cloneNode(true);
+    card.querySelector('.card__title').textContent = placeName;
+    card.querySelector('.card__image').src = imageLink;
+
+    const likeButton = card.querySelector('.card__like-button')
     likeButton.addEventListener('click', function (evt) {
         evt.target.classList.toggle('card__like-button_active');
     }
     )
-
-    const trash = cardElement.querySelector('.card__trash-icon')
+    const trash = card.querySelector('.card__trash-icon');
     trash.addEventListener('click', function () {
         trash.closest('.card').remove();
     });
 
-    const cardImage = cardElement.querySelector('.card__image');
+    const cardImage = card.querySelector('.card__image');
+    cardImage.alt = placeName;
     cardImage.addEventListener('click', () => {
         openPopup(popupCard);
         popupCardImage.src = imageLink;
-        popupCardText.textContent = placeName;
-
-        closeImage.addEventListener('click', () => {
-            closePopup(popupCard);
-        })
+        popupCardText.textContent = placeName;      
     })
 
-    return cardElement
+    return card
 }
 
+closeImage.addEventListener('click', () => {
+    closePopup(popupCard);
+})
+
+function addCard(cardEl) {
+ elementsList.prepend(cardEl);
+}
 
 function submitCard(evt) {
     evt.preventDefault();
-    addCard(cardName.value, image.value);
+    addCard(createCard(cardName.value, image.value));
     closePopup(popupAdd)
+    evt.target.reset()
 }
 
 formAdd.addEventListener('submit', submitCard)
 
+
 initialCards.forEach(function (element) {
-    const cardTemplate = document.querySelector('.template').content;
-    const initialCardElement = cardTemplate.querySelector('.card').cloneNode(true);
-
-    initialCardElement.querySelector('.card__title').textContent = element.name;
-    initialCardElement.querySelector('.card__image').src = element.link;
-    elementsList.append(initialCardElement);
-
-    const likeButton = initialCardElement.querySelector('.card__like-button')
-    likeButton.addEventListener('click', function (evt) {
-        evt.target.classList.toggle('card__like-button_active');
-    }
-    )
-
-    const trash = initialCardElement.querySelector('.card__trash-icon')
-    trash.addEventListener('click', function () {
-        trash.closest('.card').remove();
-    });
-
-    const initialCardImage = initialCardElement.querySelector('.card__image');
-    initialCardImage.addEventListener('click', () => {
-        openPopup(popupCard);
-        popupCardImage.src = element.link;
-        popupCardText.textContent = element.name;
-
-        closeImage.addEventListener('click', () => {
-            closePopup(popupCard);
-        })
-    })
-
-    return initialCardElement;
+    elementsList.append(createCard(element.name, element.link));
 })
+ 
