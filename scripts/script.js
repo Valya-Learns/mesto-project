@@ -60,8 +60,8 @@ function closePopup(modal) {
 
 editButton.addEventListener('click', () => {
     openPopup(popupEdit)
-    nameInput.value = profileName.textContent.trim(' ');
-    jobInput.value = profileJob.textContent.trim(' ');
+    nameInput.value = profileName.textContent.trim();
+    jobInput.value = profileJob.textContent.trim();
 });
 
 addButton.addEventListener('click', () => {
