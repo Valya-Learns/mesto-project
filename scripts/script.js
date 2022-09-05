@@ -90,7 +90,15 @@ formEdit.addEventListener('submit', handleProfileFormSubmit);
 function createCard(placeName, imageLink) {
     const card = cardElement.cloneNode(true);
     card.querySelector('.card__title').textContent = placeName;
-    card.querySelector('.card__image').src = imageLink;
+    const cardImage = card.querySelector('.card__image');
+    cardImage.src = imageLink;
+    cardImage.alt = placeName;
+    cardImage.addEventListener('click', () => {
+        openPopup(popupCard);
+        popupCardImage.src = imageLink;
+        popupCardImage.alt = placeName
+        popupCardText.textContent = placeName;      
+    })
 
     const likeButton = card.querySelector('.card__like-button')
     likeButton.addEventListener('click', function (evt) {
@@ -101,14 +109,6 @@ function createCard(placeName, imageLink) {
     trash.addEventListener('click', function () {
         trash.closest('.card').remove();
     });
-
-    const cardImage = card.querySelector('.card__image');
-    cardImage.alt = placeName;
-    cardImage.addEventListener('click', () => {
-        openPopup(popupCard);
-        popupCardImage.src = imageLink;
-        popupCardText.textContent = placeName;      
-    })
 
     return card
 }
